@@ -59,13 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const note = document.querySelector("#form-note");
   form?.addEventListener("submit", (event) => {
     event.preventDefault();
-    const recipient = "your.email@example.com";
+    const recipient = "sam@pdi-int.co";
     const name = document.querySelector("#name").value.trim();
     const email = document.querySelector("#email").value.trim();
     const message = document.querySelector("#message").value.trim();
     const subject = encodeURIComponent(`Resume website message from ${name}`);
     const body = encodeURIComponent(`${message}\n\nReply to: ${email}`);
-    if (recipient === "your.email@example.com") {
+    if (recipient === "sam@pdi-int.co") {
       note.textContent = "Replace the sample email address in assets/js/scripts.js before using this form.";
       return;
     }
