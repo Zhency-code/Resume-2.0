@@ -66,9 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const subject = encodeURIComponent(`Resume website message from ${name}`);
     const body = encodeURIComponent(`${message}\n\nReply to: ${email}`);
     if (recipient === "sam@pdi-int.co") {
-      note.textContent = "Replace the sample email address in assets/js/scripts.js before using this form.";
-      return;
+      window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
     }
-    window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
   });
 });
