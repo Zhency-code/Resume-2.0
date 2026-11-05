@@ -53,32 +53,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-  // Download CV QR Code Popup
-  const downloadCvBtn = document.getElementById("downloadCvBtn");
-  const qrModal = document.getElementById("qrModal");
-  const closeQrModal = document.getElementById("closeQrModal");
-  const resumeQr = document.getElementById("resumeQr");
+// Download CV QR Code Popup
+const downloadCvBtn = document.getElementById("downloadCvBtn");
+const qrModal = document.getElementById("qrModal");
+const closeQrModal = document.getElementById("closeQrModal");
+const resumeQr = document.getElementById("resumeQr");
 
-  const resumeUrl = new URL(
+const resumeUrl = new URL(
     "assets/files/Chenz-Samuel-Resume.pdf",
     window.location.href
-  ).href;
+).href;
 
-  downloadCvBtn?.addEventListener("click", () => {
+downloadCvBtn?.addEventListener("click", () => {
     if (!qrModal || !resumeQr) return;
 
     qrModal.classList.add("active");
 
     const qrApi = "https://api.qrserver.com/v1/create-qr-code/";
-    resumeQr.src = `${qrApi}?size=200x200&data=${encodeURIComponent(resumeUrl)}`;
-  });
 
-  closeQrModal?.addEventListener("click", () => {
-    qrModal?.classList.remove("active");
-  });
+    resumeQr.src =
+        `${qrApi}?size=200x200&data=${encodeURIComponent(resumeUrl)}`;
+});
 
-  qrModal?.addEventListener("click", (event) => {
+closeQrModal?.addEventListener("click", () => {
+    qrModal.classList.remove("active");
+});
+
+qrModal?.addEventListener("click", (event) => {
     if (event.target === qrModal) {
-      qrModal.classList.remove("active");
+        qrModal.classList.remove("active");
     }
-  });
+});
