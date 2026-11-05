@@ -60,7 +60,7 @@ const closeQrModal = document.getElementById("closeQrModal");
 const resumeQr = document.getElementById("resumeQr");
 
 const resumeUrl = new URL(
-    "assets/files/Chenz-Samuel-Resume.pdf",
+    "assets/files/chenzsamuelabarca.pdf",
     window.location.href
 ).href;
 
