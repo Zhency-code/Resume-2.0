@@ -87,7 +87,7 @@ h2 span {
 }
 
 .nav-links a {
-    font-size: 0.9rem;
+    font-size: 18px;
     color: var(--muted);
     transition: color 0.2s;
 }
@@ -233,9 +233,9 @@ h2 span {
 }
 
 .profile-mark {
-    width: 112px;
-    height: 112px;
-    margin: 32px 0 24px;
+    width: 140px;
+    height: 140px;
+    margin: 32px 0 24px 15px;
     border: 1px solid #4a2022;
     border-radius: 50%;
     overflow: hidden;

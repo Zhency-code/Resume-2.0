@@ -59,7 +59,7 @@ button {
 }
 
 /* ========================================
-   Header and Navigation
+    Header and Navigation
 ======================================== */
 
 .site-header {
@@ -99,7 +99,7 @@ h2 span {
 
 .nav-links a {
     color: var(--muted);
-    font-size: 0.9rem;
+    font-size: 18px;
     transition: color 0.2s;
 }
 
