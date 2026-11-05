@@ -662,3 +662,73 @@ h2 span {
         color: #444;
     }
 }
+
+/* Tools & Technologies */
+
+.tools-section h2 {
+    font-size: 2rem;
+    margin: 12px 0;
+}
+
+.tools-section h2 span {
+    color: var(--red);
+}
+
+.tools-section > p.muted {
+    margin-bottom: 28px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+}
+
+.tool-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px 16px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--red);
+}
+
+.tool-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--red);
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.tool-card h3 {
+    font-size: 1rem;
+    margin: 0 0 8px;
+}
+
+.tool-card p {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .tools-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
